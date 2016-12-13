@@ -25,6 +25,7 @@
 		6D87697F1DEEC07300AC9692 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8769761DEEC07300AC9692 /* UILabel+Extension.m */; };
 		6D8769801DEEC07300AC9692 /* UIView+LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8769781DEEC07300AC9692 /* UIView+LineView.m */; };
 		6D8769841DEEC15E00AC9692 /* RecommendedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8769831DEEC15E00AC9692 /* RecommendedViewController.m */; };
+		6DAB94131DFFD21600390098 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB94121DFFD21600390098 /* RecommendCell.m */; };
 		D04452AD528E587712896EC2 /* libPods-TotalMoneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */; };
 		D7C289BC6375EEF018B1CFAC /* libPods-TotalMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8F3C3328341D60CF2DF567 /* libPods-TotalMoney.a */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		6D8769781DEEC07300AC9692 /* UIView+LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LineView.m"; sourceTree = "<group>"; };
 		6D8769821DEEC15E00AC9692 /* RecommendedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedViewController.h; sourceTree = "<group>"; };
 		6D8769831DEEC15E00AC9692 /* RecommendedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedViewController.m; sourceTree = "<group>"; };
+		6DAB94111DFFD21600390098 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
+		6DAB94121DFFD21600390098 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
 		C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TotalMoneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4B72F18FCEC6663867A0D1 /* Pods-TotalMoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalMoneyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TotalMoneyUITests/Pods-TotalMoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED8F3C3328341D60CF2DF567 /* libPods-TotalMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TotalMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,8 +246,18 @@
 			children = (
 				6D8769821DEEC15E00AC9692 /* RecommendedViewController.h */,
 				6D8769831DEEC15E00AC9692 /* RecommendedViewController.m */,
+				6DAB94101DFFD1FF00390098 /* View */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6DAB94101DFFD1FF00390098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6DAB94111DFFD21600390098 /* RecommendCell.h */,
+				6DAB94121DFFD21600390098 /* RecommendCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B666B9AF7FB9647C5D968CC4 /* Pods */ = {
@@ -498,6 +511,7 @@
 				6D8769651DEEC06100AC9692 /* BaseViewController.m in Sources */,
 				6D87692F1DEEBD9F00AC9692 /* AppDelegate.m in Sources */,
 				6D8769841DEEC15E00AC9692 /* RecommendedViewController.m in Sources */,
+				6DAB94131DFFD21600390098 /* RecommendCell.m in Sources */,
 				6D87697C1DEEC07300AC9692 /* UIButton+Repeat.m in Sources */,
 				6D87697A1DEEC07300AC9692 /* NSString+Regex.m in Sources */,
 				6D87697E1DEEC07300AC9692 /* UIImage+Compress.m in Sources */,

@@ -7,10 +7,14 @@
 //
 
 #import "RecommendedViewController.h"
+#import "RecommendCell.h"
+
+static NSString *RecommendCellID = @"RecommendCellID";
 
 @interface RecommendedViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,strong)UITableView *recordTabView;
+@property (nonatomic, strong)UITableView *recordTabView;
+@property (nonatomic, strong)NSArray *backMarginArray;
 
 @end
 
@@ -19,15 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor cyanColor];
+//    self.view.backgroundColor = [UIColor cyanColor];
+    self.backMarginArray = @[[UIColor yellowColor],[UIColor cyanColor],[UIColor greenColor]];
     [self setUI];
 }
 
 - (void)setUI{
     [self.view addSubview:self.recordTabView];
     [self.recordTabView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self.view);
-        make.height.equalTo(@300);
+        make.top.left.right.bottom.equalTo(self.view);
     }];
 }
 
@@ -37,8 +41,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"hehe" forIndexPath:indexPath];
+    RecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:RecommendCellID forIndexPath:indexPath];
+    cell.backMarginColor = self.backMarginArray[indexPath.row];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 
 #pragma mark --lazyload
@@ -49,7 +58,7 @@
         _recordTabView.dataSource = self;
         _recordTabView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _recordTabView.backgroundColor = [UIColor whiteColor];
-        [_recordTabView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"hehe"];
+        [_recordTabView registerClass:[RecommendCell class] forCellReuseIdentifier:RecommendCellID];
     }
     return _recordTabView;
 }
