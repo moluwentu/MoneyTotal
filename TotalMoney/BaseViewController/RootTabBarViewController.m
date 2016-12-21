@@ -9,6 +9,8 @@
 #import "RootTabBarViewController.h"
 #import "RecommendedViewController.h"
 #import "CustomNavViewController.h"
+#import "BidListViewController.h"
+#import "MineViewController.h"
 
 @interface RootTabBarViewController ()
 
@@ -31,8 +33,8 @@
     self.tabBar.tintColor = [UIColor redColor];
     
     [self addChildViewControllerWithVC:[RecommendedViewController new] andTitle:@"推荐" andImageName:@"金融-1"];
-    [self addChildViewControllerWithVC:[RecommendedViewController new] andTitle:@"详情" andImageName:@"金融"];
-    [self addChildViewControllerWithVC:[RecommendedViewController new] andTitle:@"我的" andImageName:@"金融服务"];
+    [self addChildViewControllerWithVC:[BidListViewController new] andTitle:@"详情" andImageName:@"金融"];
+    [self addChildViewControllerWithVC:[MineViewController new] andTitle:@"我的" andImageName:@"金融服务"];
 }
 
 - (void)addChildViewControllerWithVC:(UIViewController *)VC andTitle:(NSString *)title andImageName:(NSString *)imageName{
