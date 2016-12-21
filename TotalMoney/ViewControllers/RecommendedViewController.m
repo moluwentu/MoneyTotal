@@ -42,6 +42,7 @@ static NSString *RecommendCellID = @"RecommendCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     RecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:RecommendCellID forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backMarginColor = self.backMarginArray[indexPath.row];
     return cell;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D37C48C1E0A5BB800AC17ED /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D37C48B1E0A5BB800AC17ED /* RootTabBarViewController.m */; };
 		6D87692C1DEEBD9F00AC9692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87692B1DEEBD9F00AC9692 /* main.m */; };
 		6D87692F1DEEBD9F00AC9692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87692E1DEEBD9F00AC9692 /* AppDelegate.m */; };
 		6D8769351DEEBD9F00AC9692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8769331DEEBD9F00AC9692 /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 		264BA28A3DA05E3E052FA95D /* Pods-TotalMoneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalMoneyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TotalMoneyUITests/Pods-TotalMoneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A7175DA034D065C36582E4E /* Pods-TotalMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TotalMoney/Pods-TotalMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		42E164017839AEE01F6B9F53 /* Pods-TotalMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-TotalMoney/Pods-TotalMoney.release.xcconfig"; sourceTree = "<group>"; };
+		6D37C48A1E0A5BB800AC17ED /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		6D37C48B1E0A5BB800AC17ED /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
 		6D8769271DEEBD9F00AC9692 /* TotalMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D87692B1DEEBD9F00AC9692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D87692D1DEEBD9F00AC9692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				6D8769621DEEC06100AC9692 /* BaseViewController.m */,
 				6D8769631DEEC06100AC9692 /* CustomNavViewController.h */,
 				6D8769641DEEC06100AC9692 /* CustomNavViewController.m */,
+				6D37C48A1E0A5BB800AC17ED /* RootTabBarViewController.h */,
+				6D37C48B1E0A5BB800AC17ED /* RootTabBarViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 				6DAB94131DFFD21600390098 /* RecommendCell.m in Sources */,
 				6D87697C1DEEC07300AC9692 /* UIButton+Repeat.m in Sources */,
 				6D87697A1DEEC07300AC9692 /* NSString+Regex.m in Sources */,
+				6D37C48C1E0A5BB800AC17ED /* RootTabBarViewController.m in Sources */,
 				6D87697E1DEEC07300AC9692 /* UIImage+Compress.m in Sources */,
 				6D87692C1DEEBD9F00AC9692 /* main.m in Sources */,
 				6D87697D1DEEC07300AC9692 /* UIGestureRecognizer+block.m in Sources */,

@@ -17,16 +17,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setUI];
     self.interactivePopGestureRecognizer.delegate = self;
 }
 
+- (void)setUI{
+    UIImage *backgroundImage = [UIImage imageNamed:@"矩形-76"];
+    [self.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-//    if (self.childViewControllers.count > 0) {
+    if (self.childViewControllers.count > 0) {
         UIButton *button = [[UIButton alloc]init];
         [button setImage:[UIImage imageNamed:@"navigationbar_back_withtext"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
         viewController.hidesBottomBarWhenPushed = YES;
-//    }
+    }
     
     [super pushViewController:viewController animated:animated];
 }
