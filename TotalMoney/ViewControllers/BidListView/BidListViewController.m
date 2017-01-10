@@ -15,6 +15,8 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
 
 @property (nonatomic, strong)UICollectionView *sortView;
 @property (nonatomic, strong)UIButton *moreBtn;
+@property (nonatomic, assign)NSInteger cellCount;
+@property (nonatomic, assign)bool isOpen;
 
 @end
 
@@ -24,6 +26,7 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.cellCount = 8;
     [self setUI];
 }
 
@@ -44,6 +47,32 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
     }];
 }
 
+- (void)moreBtnClick{
+    self.isOpen = !self.isOpen;
+    
+    [self.sortView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.equalTo(self.view);
+        self.isOpen ? make.height.equalTo(@(kScreenWidth / 4 * 3)) : make.height.equalTo(@(kScreenWidth / 4 * 2));
+    }];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+         [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        if (!self.isOpen) {
+            [self reloadSortView];
+        }
+    }];
+    if (self.isOpen) {
+        [self reloadSortView];
+    }
+   
+}
+
+- (void)reloadSortView{
+    self.cellCount = self.isOpen ? 12 : 8;
+    [self.sortView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -52,7 +81,7 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
 #pragma mark --delegate--
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 8;
+    return self.cellCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -83,6 +112,7 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
         _moreBtn.titleLabel.font = [UIFont systemFontOfSize:13];
         _moreBtn.layer.borderWidth = 1;
         _moreBtn.layer.borderColor = [UIColor redColor].CGColor;
+        [_moreBtn addTarget:self action:@selector(moreBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _moreBtn;
 }
