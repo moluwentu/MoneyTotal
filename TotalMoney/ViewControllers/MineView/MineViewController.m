@@ -8,12 +8,17 @@
 
 #import "MineViewController.h"
 #import "MineHeaderView.h"
+#import "MineTableViewCell.h"
+
+static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *mainTableView;
 @property (nonatomic, strong)MineHeaderView *headerView;
 @property (nonatomic, assign)CGFloat headerHeight;
+@property (nonatomic, strong)NSArray *imageArray;
+@property (nonatomic, strong)NSArray *titleArray;
 
 @end
 
@@ -39,6 +44,12 @@
     // Do any additional setup after loading the view.
     self.headerHeight = isIphone6P ? 260 : 230;
     [self setUI];
+    [self initData];
+}
+
+- (void)initData{
+    self.imageArray = @[@"标签",@"邮件",@"作业",@"时间"];
+    self.titleArray = @[@"记账",@"投资记录",@"给我们的建议",@"设置"];
 }
 
 - (void)setUI{
@@ -52,17 +63,19 @@
 
 #pragma mark --delegate--
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"hehe" forIndexPath:indexPath];
+    MineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MineTableViewCellID forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.iconName = self.imageArray[indexPath.row];
+    cell.title = self.titleArray[indexPath.row];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 60;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -85,9 +98,9 @@
         _mainTableView.contentInset = UIEdgeInsetsMake(self.headerHeight, 0, 34, 0);
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
-        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _mainTableView.backgroundColor = [UIColor whiteColor];
-        [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"hehe"];
+        [_mainTableView registerClass:[MineTableViewCell class] forCellReuseIdentifier:MineTableViewCellID];
         _mainTableView.tableFooterView = [[UIView alloc]init];
         [_mainTableView addSubview:self.headerView];
     }
