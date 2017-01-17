@@ -8,12 +8,15 @@
 
 #import "BidListViewController.h"
 #import "SortCollectionViewCell.h"
+#import "ListTableViewCell.h"
 
-static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
+static NSString *const SortCollectionViewCellID = @"SortCollectionViewCell";
+static NSString *const ListTableViewCellID = @"ListTableViewCellID";
 
-@interface BidListViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface BidListViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)UICollectionView *sortView;
+@property (nonatomic, strong)UITableView *listView;
 @property (nonatomic, strong)UIButton *moreBtn;
 @property (nonatomic, assign)NSInteger cellCount;
 @property (nonatomic, assign)bool isOpen;
@@ -33,6 +36,7 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
 - (void)setUI{
     [self.view addSubview:self.sortView];
     [self.view addSubview:self.moreBtn];
+    [self.view addSubview:self.listView];
     
     [self.sortView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(self.view);
@@ -44,6 +48,12 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
         make.top.equalTo(self.sortView.mas_bottom);
         make.height.equalTo(@20);
         make.width.equalTo(@40);
+    }];
+    
+    [self.listView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.moreBtn.mas_bottom);
+        make.bottom.equalTo(self.view);
     }];
 }
 
@@ -89,6 +99,21 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
     return cell;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ListTableViewCellID forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    cell.backgroundColor = [UIColor cyanColor];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
+
 #pragma mark --lazyload--
 - (UICollectionView *)sortView{
     if (_sortView == nil) {
@@ -115,6 +140,18 @@ static NSString *SortCollectionViewCellID = @"SortCollectionViewCell";
         [_moreBtn addTarget:self action:@selector(moreBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _moreBtn;
+}
+
+- (UITableView *)listView{
+    if (_listView == nil) {
+        _listView = [[UITableView alloc]init];
+        _listView.delegate = self;
+        _listView.dataSource = self;
+//        _listView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _listView.backgroundColor = [UIColor whiteColor];
+        [_listView registerClass:[ListTableViewCell class] forCellReuseIdentifier:ListTableViewCellID];
+    }
+    return _listView;
 }
 
 /*

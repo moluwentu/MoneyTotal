@@ -11,6 +11,8 @@
 @interface MineHeaderView ()
 
 @property (nonatomic, strong)UIImageView *headerImageView;
+@property (nonatomic, strong)UILabel *titleLabel;
+@property (nonatomic, strong)UILabel *moneyLabel;
 
 @end
 
@@ -25,9 +27,21 @@
 
 - (void)setUI{
     [self addSubview:self.headerImageView];
+    [self addSubview:self.titleLabel];
+    [self addSubview:self.moneyLabel];
     
     [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
+    }];
+    
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self);
+        make.centerY.equalTo(self).offset(-12);
+    }];
+    
+    [self.moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self);
+        make.centerY.equalTo(self).offset(12);
     }];
 }
 
@@ -36,6 +50,22 @@
         _headerImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"背景"]];
     }
     return _headerImageView;
+}
+
+- (UILabel *)titleLabel{
+    if (_titleLabel == nil) {
+        _titleLabel = [UILabel labelWithFontSize:18 textColor:[UIColor whiteColor]];
+        _titleLabel.text = @"投资收益";
+    }
+    return _titleLabel;
+}
+
+- (UILabel *)moneyLabel{
+    if (_moneyLabel == nil) {
+        _moneyLabel = [UILabel labelWithFontSize:15 textColor:[UIColor whiteColor]];
+        _moneyLabel.text = @"0.00元";
+    }
+    return _moneyLabel;
 }
 
 /*

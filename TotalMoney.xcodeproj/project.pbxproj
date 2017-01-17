@@ -31,6 +31,7 @@
 		6D8769801DEEC07300AC9692 /* UIView+LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8769781DEEC07300AC9692 /* UIView+LineView.m */; };
 		6DB3741C1E26220600F94F1D /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3741B1E26220600F94F1D /* MineHeaderView.m */; };
 		6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3741E1E2628EF00F94F1D /* MineTableViewCell.m */; };
+		6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB374661E2E040D00F94F1D /* ListTableViewCell.m */; };
 		6DC946571E24BCB100416517 /* SortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC946561E24BCB100416517 /* SortCollectionViewCell.m */; };
 		D04452AD528E587712896EC2 /* libPods-TotalMoneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */; };
 		D7C289BC6375EEF018B1CFAC /* libPods-TotalMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8F3C3328341D60CF2DF567 /* libPods-TotalMoney.a */; };
@@ -107,6 +108,8 @@
 		6DB3741B1E26220600F94F1D /* MineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
 		6DB3741D1E2628EF00F94F1D /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
 		6DB3741E1E2628EF00F94F1D /* MineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
+		6DB374651E2E040D00F94F1D /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		6DB374661E2E040D00F94F1D /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 		6DC946551E24BCB100416517 /* SortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortCollectionViewCell.h; sourceTree = "<group>"; };
 		6DC946561E24BCB100416517 /* SortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortCollectionViewCell.m; sourceTree = "<group>"; };
 		C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TotalMoneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,6 +329,8 @@
 			children = (
 				6DC946551E24BCB100416517 /* SortCollectionViewCell.h */,
 				6DC946561E24BCB100416517 /* SortCollectionViewCell.m */,
+				6DB374651E2E040D00F94F1D /* ListTableViewCell.h */,
+				6DB374661E2E040D00F94F1D /* ListTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,7 +414,7 @@
 		6D87691F1DEEBD9F00AC9692 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "叶慧伟";
 				TargetAttributes = {
 					6D8769261DEEBD9F00AC9692 = {
@@ -592,6 +597,7 @@
 				6D87697E1DEEC07300AC9692 /* UIImage+Compress.m in Sources */,
 				6D87692C1DEEBD9F00AC9692 /* main.m in Sources */,
 				6DC946571E24BCB100416517 /* SortCollectionViewCell.m in Sources */,
+				6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */,
 				6DB3741C1E26220600F94F1D /* MineHeaderView.m in Sources */,
 				6D87697D1DEEC07300AC9692 /* UIGestureRecognizer+block.m in Sources */,
 			);
@@ -666,6 +672,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -714,6 +721,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
