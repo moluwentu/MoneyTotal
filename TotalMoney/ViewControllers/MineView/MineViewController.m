@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import "MineHeaderView.h"
 #import "MineTableViewCell.h"
+#import "SuggestViewController.h"
 
 static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
@@ -76,6 +77,34 @@ static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case AccountingStyle:
+        {
+            NSLog(@"记账");
+        }
+            break;
+        case RecordStyle:
+        {
+            NSLog(@"记录");
+        }
+            break;
+        case SuggestStyle:
+        {
+            NSLog(@"建议");
+            [self.navigationController pushViewController:[SuggestViewController new] animated:YES];
+        }
+            break;
+        case SettingStyle:
+        {
+            NSLog(@"设置");
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

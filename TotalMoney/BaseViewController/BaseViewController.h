@@ -10,4 +10,6 @@
 
 @interface BaseViewController : UIViewController
 
+- (void)setLeftNaviItemWithTitle:(NSString *)title imageName:(NSString *)imageName;
+
 @end

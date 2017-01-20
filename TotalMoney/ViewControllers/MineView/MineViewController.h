@@ -8,6 +8,15 @@
 
 #import "BaseViewController.h"
 
+typedef NS_ENUM(NSInteger, ListSortStyle) {
+    AccountingStyle = 0,
+    RecordStyle,
+    SuggestStyle,
+    SettingStyle
+};
+
 @interface MineViewController : BaseViewController
+
+@property (nonatomic, assign)ListSortStyle sortStyle;
 
 @end

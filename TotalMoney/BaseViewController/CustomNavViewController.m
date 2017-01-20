@@ -33,9 +33,6 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.childViewControllers.count > 0) {
-        UIButton *button = [[UIButton alloc]init];
-        [button setImage:[UIImage imageNamed:@"navigationbar_back_withtext"] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
         viewController.hidesBottomBarWhenPushed = YES;
     }
     
