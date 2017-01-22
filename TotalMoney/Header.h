@@ -37,6 +37,8 @@
 #define BODY_UUID               @"uuid"
 #define BODY_IMAGE              @"image"
 #define BODY_PUSHID             @"pushid"
+#define BODY_TEST               @"test"
+
 
 #define SYSTEMUUID              [[UIDevice currentDevice] identifierForVendor].UUIDString
 
