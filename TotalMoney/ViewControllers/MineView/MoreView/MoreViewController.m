@@ -24,15 +24,15 @@ static NSString *const MoreTableViewCellID = @"MoreTableViewCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"更多";
-    self.view.backgroundColor = RGB(244, 244, 244);
-    [self setLeftNaviItemWithTitle:nil imageName:@"whiteLeftArrow"];
     [self setUI];
     self.titleArray = @[@"推荐给朋友",@"给我们评分"];
     self.imageArray = @[@"flower",@"gear"];
 }
 
 - (void)setUI{
+    self.title = @"更多";
+    self.view.backgroundColor = RGB(244, 244, 244);
+    [self setLeftNaviItemWithTitle:nil imageName:@"whiteLeftArrow"];
     [self.view addSubview:self.mainTableView];
     
     [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {

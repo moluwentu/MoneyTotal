@@ -35,6 +35,10 @@
 		6DB374E91E31E6CB00F94F1D /* SuggestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB374E81E31E6CB00F94F1D /* SuggestViewController.m */; };
 		6DC510421E345E0F0067FB19 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510411E345E0F0067FB19 /* MoreViewController.m */; };
 		6DC510451E3463180067FB19 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510441E3463180067FB19 /* MoreTableViewCell.m */; };
+		6DC510491E348B9F0067FB19 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510481E348B9F0067FB19 /* RecordViewController.m */; };
+		6DC510511E348BDF0067FB19 /* LegendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5104C1E348BDF0067FB19 /* LegendCell.m */; };
+		6DC510521E348BDF0067FB19 /* XTCirView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5104E1E348BDF0067FB19 /* XTCirView.m */; };
+		6DC510531E348BDF0067FB19 /* XTGraphicalLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510501E348BDF0067FB19 /* XTGraphicalLayer.m */; };
 		6DC946571E24BCB100416517 /* SortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC946561E24BCB100416517 /* SortCollectionViewCell.m */; };
 		D04452AD528E587712896EC2 /* libPods-TotalMoneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */; };
 		D7C289BC6375EEF018B1CFAC /* libPods-TotalMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8F3C3328341D60CF2DF567 /* libPods-TotalMoney.a */; };
@@ -119,6 +123,14 @@
 		6DC510411E345E0F0067FB19 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		6DC510431E3463180067FB19 /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
 		6DC510441E3463180067FB19 /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
+		6DC510471E348B9F0067FB19 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		6DC510481E348B9F0067FB19 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		6DC5104B1E348BDF0067FB19 /* LegendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegendCell.h; sourceTree = "<group>"; };
+		6DC5104C1E348BDF0067FB19 /* LegendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegendCell.m; sourceTree = "<group>"; };
+		6DC5104D1E348BDF0067FB19 /* XTCirView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTCirView.h; sourceTree = "<group>"; };
+		6DC5104E1E348BDF0067FB19 /* XTCirView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTCirView.m; sourceTree = "<group>"; };
+		6DC5104F1E348BDF0067FB19 /* XTGraphicalLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTGraphicalLayer.h; sourceTree = "<group>"; };
+		6DC510501E348BDF0067FB19 /* XTGraphicalLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTGraphicalLayer.m; sourceTree = "<group>"; };
 		6DC946551E24BCB100416517 /* SortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortCollectionViewCell.h; sourceTree = "<group>"; };
 		6DC946561E24BCB100416517 /* SortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortCollectionViewCell.m; sourceTree = "<group>"; };
 		C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TotalMoneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +206,7 @@
 		6D1DFC7A1E0A648700D44ED0 /* MineView */ = {
 			isa = PBXGroup;
 			children = (
+				6DC510461E348B910067FB19 /* RecordView */,
 				6DC5103F1E345E030067FB19 /* MoreView */,
 				6DB374E61E31E6BD00F94F1D /* SuggestView */,
 				6DB374191E2621F400F94F1D /* View */,
@@ -353,6 +366,29 @@
 				6DC510441E3463180067FB19 /* MoreTableViewCell.m */,
 			);
 			path = MoreView;
+			sourceTree = "<group>";
+		};
+		6DC510461E348B910067FB19 /* RecordView */ = {
+			isa = PBXGroup;
+			children = (
+				6DC5104A1E348BD60067FB19 /* XTGraphcal */,
+				6DC510471E348B9F0067FB19 /* RecordViewController.h */,
+				6DC510481E348B9F0067FB19 /* RecordViewController.m */,
+			);
+			path = RecordView;
+			sourceTree = "<group>";
+		};
+		6DC5104A1E348BD60067FB19 /* XTGraphcal */ = {
+			isa = PBXGroup;
+			children = (
+				6DC5104B1E348BDF0067FB19 /* LegendCell.h */,
+				6DC5104C1E348BDF0067FB19 /* LegendCell.m */,
+				6DC5104D1E348BDF0067FB19 /* XTCirView.h */,
+				6DC5104E1E348BDF0067FB19 /* XTCirView.m */,
+				6DC5104F1E348BDF0067FB19 /* XTGraphicalLayer.h */,
+				6DC510501E348BDF0067FB19 /* XTGraphicalLayer.m */,
+			);
+			path = XTGraphcal;
 			sourceTree = "<group>";
 		};
 		6DC946541E24BC8A00416517 /* View */ = {
@@ -614,13 +650,16 @@
 				6D8769791DEEC07300AC9692 /* NSString+MD5.m in Sources */,
 				6DC510421E345E0F0067FB19 /* MoreViewController.m in Sources */,
 				6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */,
+				6DC510491E348B9F0067FB19 /* RecordViewController.m in Sources */,
 				6DC510451E3463180067FB19 /* MoreTableViewCell.m in Sources */,
 				6D87697B1DEEC07300AC9692 /* UIButton+Extension.m in Sources */,
 				6D8769661DEEC06100AC9692 /* CustomNavViewController.m in Sources */,
 				6D8769801DEEC07300AC9692 /* UIView+LineView.m in Sources */,
+				6DC510531E348BDF0067FB19 /* XTGraphicalLayer.m in Sources */,
 				6D8769651DEEC06100AC9692 /* BaseViewController.m in Sources */,
 				6D87692F1DEEBD9F00AC9692 /* AppDelegate.m in Sources */,
 				6D1DFC781E0A643A00D44ED0 /* RecommendCell.m in Sources */,
+				6DC510511E348BDF0067FB19 /* LegendCell.m in Sources */,
 				6D1DFC771E0A643A00D44ED0 /* RecommendedViewController.m in Sources */,
 				6D87697C1DEEC07300AC9692 /* UIButton+Repeat.m in Sources */,
 				6D87697A1DEEC07300AC9692 /* NSString+Regex.m in Sources */,
@@ -630,6 +669,7 @@
 				6D87697E1DEEC07300AC9692 /* UIImage+Compress.m in Sources */,
 				6D87692C1DEEBD9F00AC9692 /* main.m in Sources */,
 				6DC946571E24BCB100416517 /* SortCollectionViewCell.m in Sources */,
+				6DC510521E348BDF0067FB19 /* XTCirView.m in Sources */,
 				6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */,
 				6DB3741C1E26220600F94F1D /* MineHeaderView.m in Sources */,
 				6D87697D1DEEC07300AC9692 /* UIGestureRecognizer+block.m in Sources */,

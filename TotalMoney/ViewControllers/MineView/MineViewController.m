@@ -11,6 +11,7 @@
 #import "MineTableViewCell.h"
 #import "SuggestViewController.h"
 #import "MoreViewController.h"
+#import "RecordViewController.h"
 
 static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
@@ -90,6 +91,7 @@ static NSString *const MineTableViewCellID = @"MineTableViewCellID";
         case RecordStyle:
         {
             NSLog(@"记录");
+            [self.navigationController pushViewController:[RecordViewController new] animated:YES];
         }
             break;
         case SuggestStyle:
