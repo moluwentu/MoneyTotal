@@ -10,6 +10,7 @@
 #import "MineHeaderView.h"
 #import "MineTableViewCell.h"
 #import "SuggestViewController.h"
+#import "MoreViewController.h"
 
 static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
@@ -50,7 +51,7 @@ static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
 - (void)initData{
     self.imageArray = @[@"标签",@"邮件",@"作业",@"时间"];
-    self.titleArray = @[@"记账",@"投资记录",@"给我们的建议",@"设置"];
+    self.titleArray = @[@"记账",@"投资记录",@"给我们的建议",@"更多"];
 }
 
 - (void)setUI{
@@ -99,7 +100,8 @@ static NSString *const MineTableViewCellID = @"MineTableViewCellID";
             break;
         case SettingStyle:
         {
-            NSLog(@"设置");
+            NSLog(@"更多");
+            [self.navigationController pushViewController:[MoreViewController new] animated:YES];
         }
             break;
         default:

@@ -33,6 +33,8 @@
 		6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3741E1E2628EF00F94F1D /* MineTableViewCell.m */; };
 		6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB374661E2E040D00F94F1D /* ListTableViewCell.m */; };
 		6DB374E91E31E6CB00F94F1D /* SuggestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB374E81E31E6CB00F94F1D /* SuggestViewController.m */; };
+		6DC510421E345E0F0067FB19 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510411E345E0F0067FB19 /* MoreViewController.m */; };
+		6DC510451E3463180067FB19 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510441E3463180067FB19 /* MoreTableViewCell.m */; };
 		6DC946571E24BCB100416517 /* SortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC946561E24BCB100416517 /* SortCollectionViewCell.m */; };
 		D04452AD528E587712896EC2 /* libPods-TotalMoneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */; };
 		D7C289BC6375EEF018B1CFAC /* libPods-TotalMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8F3C3328341D60CF2DF567 /* libPods-TotalMoney.a */; };
@@ -113,6 +115,10 @@
 		6DB374661E2E040D00F94F1D /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 		6DB374E71E31E6CB00F94F1D /* SuggestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestViewController.h; sourceTree = "<group>"; };
 		6DB374E81E31E6CB00F94F1D /* SuggestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestViewController.m; sourceTree = "<group>"; };
+		6DC510401E345E0F0067FB19 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		6DC510411E345E0F0067FB19 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		6DC510431E3463180067FB19 /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
+		6DC510441E3463180067FB19 /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
 		6DC946551E24BCB100416517 /* SortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortCollectionViewCell.h; sourceTree = "<group>"; };
 		6DC946561E24BCB100416517 /* SortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortCollectionViewCell.m; sourceTree = "<group>"; };
 		C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TotalMoneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +194,7 @@
 		6D1DFC7A1E0A648700D44ED0 /* MineView */ = {
 			isa = PBXGroup;
 			children = (
+				6DC5103F1E345E030067FB19 /* MoreView */,
 				6DB374E61E31E6BD00F94F1D /* SuggestView */,
 				6DB374191E2621F400F94F1D /* View */,
 				6D1DFC7E1E0A64A800D44ED0 /* MineViewController.h */,
@@ -335,6 +342,17 @@
 				6DB374E81E31E6CB00F94F1D /* SuggestViewController.m */,
 			);
 			path = SuggestView;
+			sourceTree = "<group>";
+		};
+		6DC5103F1E345E030067FB19 /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				6DC510401E345E0F0067FB19 /* MoreViewController.h */,
+				6DC510411E345E0F0067FB19 /* MoreViewController.m */,
+				6DC510431E3463180067FB19 /* MoreTableViewCell.h */,
+				6DC510441E3463180067FB19 /* MoreTableViewCell.m */,
+			);
+			path = MoreView;
 			sourceTree = "<group>";
 		};
 		6DC946541E24BC8A00416517 /* View */ = {
@@ -594,7 +612,9 @@
 			files = (
 				6D87697F1DEEC07300AC9692 /* UILabel+Extension.m in Sources */,
 				6D8769791DEEC07300AC9692 /* NSString+MD5.m in Sources */,
+				6DC510421E345E0F0067FB19 /* MoreViewController.m in Sources */,
 				6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */,
+				6DC510451E3463180067FB19 /* MoreTableViewCell.m in Sources */,
 				6D87697B1DEEC07300AC9692 /* UIButton+Extension.m in Sources */,
 				6D8769661DEEC06100AC9692 /* CustomNavViewController.m in Sources */,
 				6D8769801DEEC07300AC9692 /* UIView+LineView.m in Sources */,
