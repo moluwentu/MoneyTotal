@@ -8,13 +8,17 @@
 
 #import "RecommendedViewController.h"
 #import "RecommendCell.h"
+#import "HistogramCell.h"
 
 static NSString *RecommendCellID = @"RecommendCellID";
+static NSString *HistogramCellID = @"HistogramCellID";
 
 @interface RecommendedViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *recordTabView;
 @property (nonatomic, strong)NSArray *backMarginArray;
+@property (nonatomic, strong)NSArray *profitArray;
+@property (nonatomic, strong)NSMutableArray *resultArray;
 
 @end
 
@@ -26,6 +30,21 @@ static NSString *RecommendCellID = @"RecommendCellID";
 //    self.view.backgroundColor = [UIColor cyanColor];
     self.backMarginArray = @[[UIColor yellowColor],[UIColor cyanColor],[UIColor greenColor]];
     [self setUI];
+    [self initData];
+}
+
+- (void)initData{
+    //已经排好顺序
+    self.profitArray = @[@"10",@"8",@"6",@"5",@"3"];
+    double sum = 0;
+    for (NSString *percent in self.profitArray) {
+        sum = [percent doubleValue] + sum;
+    }
+    NSLog(@"sum---%f",sum);
+    for (int i = 0; i < self.profitArray.count; i++) {
+        double width = [self.profitArray[i] doubleValue] / [self.profitArray[0] doubleValue] * (kScreenWidth - 50);
+        [self.resultArray addObject:[NSString stringWithFormat:@"%f",width]];
+    }
 }
 
 - (void)setUI{
@@ -36,19 +55,38 @@ static NSString *RecommendCellID = @"RecommendCellID";
 }
 
 #pragma mark --delegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    if (section == 0) {
+        return 3;
+    }else{
+        return 5;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    RecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:RecommendCellID forIndexPath:indexPath];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.backMarginColor = self.backMarginArray[indexPath.row];
-    return cell;
+    if (indexPath.section == 0) {
+        RecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:RecommendCellID forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backMarginColor = self.backMarginArray[indexPath.row];
+        return cell;
+    }else{
+        HistogramCell *cell = [tableView dequeueReusableCellWithIdentifier:HistogramCellID forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.profit = self.resultArray[indexPath.row];
+        return cell;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    if (indexPath.section == 0) {
+        return 100;
+    }else{
+        return 50;
+    }
 }
 
 #pragma mark --lazyload
@@ -60,8 +98,16 @@ static NSString *RecommendCellID = @"RecommendCellID";
         _recordTabView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _recordTabView.backgroundColor = [UIColor whiteColor];
         [_recordTabView registerClass:[RecommendCell class] forCellReuseIdentifier:RecommendCellID];
+        [_recordTabView registerClass:[HistogramCell class] forCellReuseIdentifier:HistogramCellID];
     }
     return _recordTabView;
+}
+
+- (NSMutableArray *)resultArray{
+    if (_resultArray == nil) {
+        _resultArray = [NSMutableArray array];
+    }
+    return _resultArray;
 }
 
 - (void)didReceiveMemoryWarning {

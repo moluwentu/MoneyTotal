@@ -39,6 +39,7 @@
 		6DC510511E348BDF0067FB19 /* LegendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5104C1E348BDF0067FB19 /* LegendCell.m */; };
 		6DC510521E348BDF0067FB19 /* XTCirView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5104E1E348BDF0067FB19 /* XTCirView.m */; };
 		6DC510531E348BDF0067FB19 /* XTGraphicalLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510501E348BDF0067FB19 /* XTGraphicalLayer.m */; };
+		6DC510611E373A7C0067FB19 /* HistogramCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC510601E373A7C0067FB19 /* HistogramCell.m */; };
 		6DC946571E24BCB100416517 /* SortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC946561E24BCB100416517 /* SortCollectionViewCell.m */; };
 		D04452AD528E587712896EC2 /* libPods-TotalMoneyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */; };
 		D7C289BC6375EEF018B1CFAC /* libPods-TotalMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8F3C3328341D60CF2DF567 /* libPods-TotalMoney.a */; };
@@ -132,6 +133,8 @@
 		6DC5104E1E348BDF0067FB19 /* XTCirView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTCirView.m; sourceTree = "<group>"; };
 		6DC5104F1E348BDF0067FB19 /* XTGraphicalLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTGraphicalLayer.h; sourceTree = "<group>"; };
 		6DC510501E348BDF0067FB19 /* XTGraphicalLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTGraphicalLayer.m; sourceTree = "<group>"; };
+		6DC5105F1E373A7C0067FB19 /* HistogramCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistogramCell.h; sourceTree = "<group>"; };
+		6DC510601E373A7C0067FB19 /* HistogramCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistogramCell.m; sourceTree = "<group>"; };
 		6DC946551E24BCB100416517 /* SortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortCollectionViewCell.h; sourceTree = "<group>"; };
 		6DC946561E24BCB100416517 /* SortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortCollectionViewCell.m; sourceTree = "<group>"; };
 		C4F08565B866DED0F6DD0928 /* libPods-TotalMoneyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TotalMoneyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +193,8 @@
 			children = (
 				6D1DFC751E0A643A00D44ED0 /* RecommendCell.h */,
 				6D1DFC761E0A643A00D44ED0 /* RecommendCell.m */,
+				6DC5105F1E373A7C0067FB19 /* HistogramCell.h */,
+				6DC510601E373A7C0067FB19 /* HistogramCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 			files = (
 				6D87697F1DEEC07300AC9692 /* UILabel+Extension.m in Sources */,
 				6D8769791DEEC07300AC9692 /* NSString+MD5.m in Sources */,
+				6DC510611E373A7C0067FB19 /* HistogramCell.m in Sources */,
 				6DC510421E345E0F0067FB19 /* MoreViewController.m in Sources */,
 				6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */,
 				6DC510491E348B9F0067FB19 /* RecordViewController.m in Sources */,
