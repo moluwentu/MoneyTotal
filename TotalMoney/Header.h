@@ -9,15 +9,15 @@
 #ifndef Header_h
 #define Header_h
 //base URL
-#define BASEURL     @"http://192.168.30.38:5000/app/v1.0/"//本地服务器
-//#define BASEURL     @"http://119.254.209.148:6001/app/v1.0/"//app开发服务器
+#define BASEURL     @"http://192.168.30.42:5000/app/"//本地服务器
+//#define BASEURL     @"http://119.254.209.148:6001/app/"//外网服务器
 
 
 #define URL_GETREGISTCODE           [BASEURL stringByAppendingString:@"regist/message/"]                //获取注册验证码＊
 #define URL_MSGLOGIN_MSG            [BASEURL stringByAppendingString:@"msglogin/message/"]              //短信登陆验证码＊
 #define URL_FORGETPASSWORD          [BASEURL stringByAppendingString:@"setusername/message/"]           //修改手机号验证码＊
 #define URL_CHECKIFREGISTER         [BASEURL stringByAppendingString:@"checkIfRegisted/"]               //是否已注册*
-#define URL_REGISTER                [BASEURL stringByAppendingString:@"regist/confirmnopwd/"]           //注册＊
+#define URL_REGIST                  [BASEURL stringByAppendingString:@"regist/confirm/"]                //注册＊
 #define URL_LOGIN_USERNAME          [BASEURL stringByAppendingString:@"login/"]                         //用户名登录＊
 #define URL_MSGLOGIN                [BASEURL stringByAppendingString:@"msglogin/"]                      //短信登陆＊
 #define URL_WEIXINLOGIN             [BASEURL stringByAppendingString:@"wxlogin/"]                       //微信登录＊
@@ -40,6 +40,7 @@
 
 #define SYSTEMUUID              [[UIDevice currentDevice] identifierForVendor].UUIDString
 
+#define LOGINTOKENDIC           @"loginTokenDic"
 
 //notify
 #define NOTIFAUPDATE                @"NEEDUPDATENOTIFICATION"

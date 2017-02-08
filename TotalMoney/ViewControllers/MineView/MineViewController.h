@@ -12,6 +12,7 @@ typedef NS_ENUM(NSInteger, ListSortStyle) {
     AccountingStyle = 0,
     RecordStyle,
     SuggestStyle,
+    LoginStyle,
     SettingStyle
 };
 
