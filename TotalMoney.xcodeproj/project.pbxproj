@@ -32,6 +32,19 @@
 		6D87697E1DEEC07300AC9692 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8769741DEEC07300AC9692 /* UIImage+Compress.m */; };
 		6D87697F1DEEC07300AC9692 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8769761DEEC07300AC9692 /* UILabel+Extension.m */; };
 		6D8769801DEEC07300AC9692 /* UIView+LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8769781DEEC07300AC9692 /* UIView+LineView.m */; };
+		6D90E7CD1E4B004D00F240ED /* AsyncRequestHandles.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7A61E4B004D00F240ED /* AsyncRequestHandles.m */; };
+		6D90E7CE1E4B004D00F240ED /* Errand.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7AA1E4B004D00F240ED /* Errand.m */; };
+		6D90E7CF1E4B004D00F240ED /* ErrandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7AC1E4B004D00F240ED /* ErrandManager.m */; };
+		6D90E7D01E4B004D00F240ED /* ResponseHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7B01E4B004D00F240ED /* ResponseHandle.m */; };
+		6D90E7D11E4B004D00F240ED /* HttpResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7B41E4B004D00F240ED /* HttpResult.m */; };
+		6D90E7D21E4B004D00F240ED /* NetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7B61E4B004D00F240ED /* NetworkRequest.m */; };
+		6D90E7D31E4B004D00F240ED /* RequestEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7B81E4B004D00F240ED /* RequestEngine.m */; };
+		6D90E7D41E4B004D00F240ED /* TaskSack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7BB1E4B004D00F240ED /* TaskSack.m */; };
+		6D90E7D51E4B004D00F240ED /* RequestResultBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7C11E4B004D00F240ED /* RequestResultBlock.m */; };
+		6D90E7D61E4B004D00F240ED /* RequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7C41E4B004D00F240ED /* RequestUtil.m */; };
+		6D90E7D71E4B004D00F240ED /* ResponseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7C71E4B004D00F240ED /* ResponseUtil.m */; };
+		6D90E7D81E4B004D00F240ED /* NSObject+PreventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7CA1E4B004D00F240ED /* NSObject+PreventModel.m */; };
+		6D90E7D91E4B004D00F240ED /* PreventClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7CC1E4B004D00F240ED /* PreventClassInfo.m */; };
 		6DB3741C1E26220600F94F1D /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3741B1E26220600F94F1D /* MineHeaderView.m */; };
 		6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3741E1E2628EF00F94F1D /* MineTableViewCell.m */; };
 		6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB374661E2E040D00F94F1D /* ListTableViewCell.m */; };
@@ -122,6 +135,34 @@
 		6D8769761DEEC07300AC9692 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
 		6D8769771DEEC07300AC9692 /* UIView+LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LineView.h"; sourceTree = "<group>"; };
 		6D8769781DEEC07300AC9692 /* UIView+LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LineView.m"; sourceTree = "<group>"; };
+		6D90E7A51E4B004D00F240ED /* AsyncRequestHandles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequestHandles.h; sourceTree = "<group>"; };
+		6D90E7A61E4B004D00F240ED /* AsyncRequestHandles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequestHandles.m; sourceTree = "<group>"; };
+		6D90E7A71E4B004D00F240ED /* ModelHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelHeader.h; sourceTree = "<group>"; };
+		6D90E7A91E4B004D00F240ED /* Errand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Errand.h; sourceTree = "<group>"; };
+		6D90E7AA1E4B004D00F240ED /* Errand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Errand.m; sourceTree = "<group>"; };
+		6D90E7AB1E4B004D00F240ED /* ErrandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrandManager.h; sourceTree = "<group>"; };
+		6D90E7AC1E4B004D00F240ED /* ErrandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrandManager.m; sourceTree = "<group>"; };
+		6D90E7AF1E4B004D00F240ED /* ResponseHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseHandle.h; sourceTree = "<group>"; };
+		6D90E7B01E4B004D00F240ED /* ResponseHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseHandle.m; sourceTree = "<group>"; };
+		6D90E7B31E4B004D00F240ED /* HttpResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResult.h; sourceTree = "<group>"; };
+		6D90E7B41E4B004D00F240ED /* HttpResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResult.m; sourceTree = "<group>"; };
+		6D90E7B51E4B004D00F240ED /* NetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkRequest.h; sourceTree = "<group>"; };
+		6D90E7B61E4B004D00F240ED /* NetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkRequest.m; sourceTree = "<group>"; };
+		6D90E7B71E4B004D00F240ED /* RequestEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestEngine.h; sourceTree = "<group>"; };
+		6D90E7B81E4B004D00F240ED /* RequestEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestEngine.m; sourceTree = "<group>"; };
+		6D90E7BA1E4B004D00F240ED /* TaskSack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSack.h; sourceTree = "<group>"; };
+		6D90E7BB1E4B004D00F240ED /* TaskSack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSack.m; sourceTree = "<group>"; };
+		6D90E7BE1E4B004D00F240ED /* ErrandCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrandCommon.h; sourceTree = "<group>"; };
+		6D90E7C01E4B004D00F240ED /* RequestResultBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestResultBlock.h; sourceTree = "<group>"; };
+		6D90E7C11E4B004D00F240ED /* RequestResultBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestResultBlock.m; sourceTree = "<group>"; };
+		6D90E7C31E4B004D00F240ED /* RequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestUtil.h; sourceTree = "<group>"; };
+		6D90E7C41E4B004D00F240ED /* RequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestUtil.m; sourceTree = "<group>"; };
+		6D90E7C61E4B004D00F240ED /* ResponseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseUtil.h; sourceTree = "<group>"; };
+		6D90E7C71E4B004D00F240ED /* ResponseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseUtil.m; sourceTree = "<group>"; };
+		6D90E7C91E4B004D00F240ED /* NSObject+PreventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PreventModel.h"; sourceTree = "<group>"; };
+		6D90E7CA1E4B004D00F240ED /* NSObject+PreventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PreventModel.m"; sourceTree = "<group>"; };
+		6D90E7CB1E4B004D00F240ED /* PreventClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreventClassInfo.h; sourceTree = "<group>"; };
+		6D90E7CC1E4B004D00F240ED /* PreventClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreventClassInfo.m; sourceTree = "<group>"; };
 		6DB3741A1E26220600F94F1D /* MineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
 		6DB3741B1E26220600F94F1D /* MineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
 		6DB3741D1E2628EF00F94F1D /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
@@ -322,6 +363,7 @@
 		6D87695D1DEEBEAB00AC9692 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6D90E7A11E4B004D00F240ED /* Net */,
 				65F8878E1E4AAD9700D82D40 /* CustomTools */,
 				6D8769671DEEC07300AC9692 /* CategoryTools */,
 			);
@@ -373,6 +415,153 @@
 				6D1DFC701E0A643A00D44ED0 /* RecommendView */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6D90E7A11E4B004D00F240ED /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7A21E4B004D00F240ED /* NetworkServe */,
+				6D90E7C81E4B004D00F240ED /* PreventModel */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		6D90E7A21E4B004D00F240ED /* NetworkServe */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7A41E4B004D00F240ED /* AsyncHandles */,
+				6D90E7A81E4B004D00F240ED /* ErrandManager */,
+				6D90E7AD1E4B004D00F240ED /* Handles */,
+				6D90E7B11E4B004D00F240ED /* RequestEngine */,
+				6D90E7B91E4B004D00F240ED /* TaskSack */,
+				6D90E7BC1E4B004D00F240ED /* Utils */,
+			);
+			path = NetworkServe;
+			sourceTree = "<group>";
+		};
+		6D90E7A41E4B004D00F240ED /* AsyncHandles */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7A51E4B004D00F240ED /* AsyncRequestHandles.h */,
+				6D90E7A61E4B004D00F240ED /* AsyncRequestHandles.m */,
+				6D90E7A71E4B004D00F240ED /* ModelHeader.h */,
+			);
+			path = AsyncHandles;
+			sourceTree = "<group>";
+		};
+		6D90E7A81E4B004D00F240ED /* ErrandManager */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7A91E4B004D00F240ED /* Errand.h */,
+				6D90E7AA1E4B004D00F240ED /* Errand.m */,
+				6D90E7AB1E4B004D00F240ED /* ErrandManager.h */,
+				6D90E7AC1E4B004D00F240ED /* ErrandManager.m */,
+			);
+			path = ErrandManager;
+			sourceTree = "<group>";
+		};
+		6D90E7AD1E4B004D00F240ED /* Handles */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7AE1E4B004D00F240ED /* ResponseHandle */,
+			);
+			path = Handles;
+			sourceTree = "<group>";
+		};
+		6D90E7AE1E4B004D00F240ED /* ResponseHandle */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7AF1E4B004D00F240ED /* ResponseHandle.h */,
+				6D90E7B01E4B004D00F240ED /* ResponseHandle.m */,
+			);
+			path = ResponseHandle;
+			sourceTree = "<group>";
+		};
+		6D90E7B11E4B004D00F240ED /* RequestEngine */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7B21E4B004D00F240ED /* HttpResult */,
+				6D90E7B51E4B004D00F240ED /* NetworkRequest.h */,
+				6D90E7B61E4B004D00F240ED /* NetworkRequest.m */,
+				6D90E7B71E4B004D00F240ED /* RequestEngine.h */,
+				6D90E7B81E4B004D00F240ED /* RequestEngine.m */,
+			);
+			path = RequestEngine;
+			sourceTree = "<group>";
+		};
+		6D90E7B21E4B004D00F240ED /* HttpResult */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7B31E4B004D00F240ED /* HttpResult.h */,
+				6D90E7B41E4B004D00F240ED /* HttpResult.m */,
+			);
+			path = HttpResult;
+			sourceTree = "<group>";
+		};
+		6D90E7B91E4B004D00F240ED /* TaskSack */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7BA1E4B004D00F240ED /* TaskSack.h */,
+				6D90E7BB1E4B004D00F240ED /* TaskSack.m */,
+			);
+			path = TaskSack;
+			sourceTree = "<group>";
+		};
+		6D90E7BC1E4B004D00F240ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7BD1E4B004D00F240ED /* ErrandCommon */,
+				6D90E7BF1E4B004D00F240ED /* RequestResultBlock */,
+				6D90E7C21E4B004D00F240ED /* RequestUtil */,
+				6D90E7C51E4B004D00F240ED /* ResponseUtil */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6D90E7BD1E4B004D00F240ED /* ErrandCommon */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7BE1E4B004D00F240ED /* ErrandCommon.h */,
+			);
+			path = ErrandCommon;
+			sourceTree = "<group>";
+		};
+		6D90E7BF1E4B004D00F240ED /* RequestResultBlock */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7C01E4B004D00F240ED /* RequestResultBlock.h */,
+				6D90E7C11E4B004D00F240ED /* RequestResultBlock.m */,
+			);
+			path = RequestResultBlock;
+			sourceTree = "<group>";
+		};
+		6D90E7C21E4B004D00F240ED /* RequestUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7C31E4B004D00F240ED /* RequestUtil.h */,
+				6D90E7C41E4B004D00F240ED /* RequestUtil.m */,
+			);
+			path = RequestUtil;
+			sourceTree = "<group>";
+		};
+		6D90E7C51E4B004D00F240ED /* ResponseUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7C61E4B004D00F240ED /* ResponseUtil.h */,
+				6D90E7C71E4B004D00F240ED /* ResponseUtil.m */,
+			);
+			path = ResponseUtil;
+			sourceTree = "<group>";
+		};
+		6D90E7C81E4B004D00F240ED /* PreventModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D90E7C91E4B004D00F240ED /* NSObject+PreventModel.h */,
+				6D90E7CA1E4B004D00F240ED /* NSObject+PreventModel.m */,
+				6D90E7CB1E4B004D00F240ED /* PreventClassInfo.h */,
+				6D90E7CC1E4B004D00F240ED /* PreventClassInfo.m */,
+			);
+			path = PreventModel;
 			sourceTree = "<group>";
 		};
 		6DB374191E2621F400F94F1D /* View */ = {
@@ -686,20 +875,30 @@
 			files = (
 				65F887881E4AA9DF00D82D40 /* LoginViewController.m in Sources */,
 				6D87697F1DEEC07300AC9692 /* UILabel+Extension.m in Sources */,
+				6D90E7D41E4B004D00F240ED /* TaskSack.m in Sources */,
+				6D90E7D21E4B004D00F240ED /* NetworkRequest.m in Sources */,
 				6D8769791DEEC07300AC9692 /* NSString+MD5.m in Sources */,
+				6D90E7D91E4B004D00F240ED /* PreventClassInfo.m in Sources */,
 				6DC510611E373A7C0067FB19 /* HistogramCell.m in Sources */,
 				6DC510421E345E0F0067FB19 /* MoreViewController.m in Sources */,
+				6D90E7CE1E4B004D00F240ED /* Errand.m in Sources */,
+				6D90E7D01E4B004D00F240ED /* ResponseHandle.m in Sources */,
 				6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */,
+				6D90E7D81E4B004D00F240ED /* NSObject+PreventModel.m in Sources */,
 				6DC510491E348B9F0067FB19 /* RecordViewController.m in Sources */,
 				6DC510451E3463180067FB19 /* MoreTableViewCell.m in Sources */,
 				6D87697B1DEEC07300AC9692 /* UIButton+Extension.m in Sources */,
+				6D90E7CD1E4B004D00F240ED /* AsyncRequestHandles.m in Sources */,
 				6D8769661DEEC06100AC9692 /* CustomNavViewController.m in Sources */,
 				6D8769801DEEC07300AC9692 /* UIView+LineView.m in Sources */,
 				6DC510531E348BDF0067FB19 /* XTGraphicalLayer.m in Sources */,
+				6D90E7D51E4B004D00F240ED /* RequestResultBlock.m in Sources */,
 				6D8769651DEEC06100AC9692 /* BaseViewController.m in Sources */,
+				6D90E7CF1E4B004D00F240ED /* ErrandManager.m in Sources */,
 				6D87692F1DEEBD9F00AC9692 /* AppDelegate.m in Sources */,
 				6D1DFC781E0A643A00D44ED0 /* RecommendCell.m in Sources */,
 				65F8878B1E4AA9EF00D82D40 /* RegistViewController.m in Sources */,
+				6D90E7D11E4B004D00F240ED /* HttpResult.m in Sources */,
 				6DC510511E348BDF0067FB19 /* LegendCell.m in Sources */,
 				6D1DFC771E0A643A00D44ED0 /* RecommendedViewController.m in Sources */,
 				65F887911E4AADC000D82D40 /* Tools.m in Sources */,
@@ -707,11 +906,14 @@
 				6D87697A1DEEC07300AC9692 /* NSString+Regex.m in Sources */,
 				6D37C48C1E0A5BB800AC17ED /* RootTabBarViewController.m in Sources */,
 				6D1DFC801E0A64A800D44ED0 /* MineViewController.m in Sources */,
+				6D90E7D61E4B004D00F240ED /* RequestUtil.m in Sources */,
 				6D1DFC7D1E0A649500D44ED0 /* BidListViewController.m in Sources */,
 				6D87697E1DEEC07300AC9692 /* UIImage+Compress.m in Sources */,
 				6D87692C1DEEBD9F00AC9692 /* main.m in Sources */,
 				6DC946571E24BCB100416517 /* SortCollectionViewCell.m in Sources */,
+				6D90E7D31E4B004D00F240ED /* RequestEngine.m in Sources */,
 				6DC510521E348BDF0067FB19 /* XTCirView.m in Sources */,
+				6D90E7D71E4B004D00F240ED /* ResponseUtil.m in Sources */,
 				6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */,
 				6DB3741C1E26220600F94F1D /* MineHeaderView.m in Sources */,
 				6D87697D1DEEC07300AC9692 /* UIGestureRecognizer+block.m in Sources */,
