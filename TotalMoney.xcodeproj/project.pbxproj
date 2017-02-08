@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65F887881E4AA9DF00D82D40 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F887871E4AA9DF00D82D40 /* LoginViewController.m */; };
+		65F8878B1E4AA9EF00D82D40 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8878A1E4AA9EF00D82D40 /* RegistViewController.m */; };
+		65F887911E4AADC000D82D40 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F887901E4AADC000D82D40 /* Tools.m */; };
 		6D1DFC771E0A643A00D44ED0 /* RecommendedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1DFC721E0A643A00D44ED0 /* RecommendedViewController.m */; };
 		6D1DFC781E0A643A00D44ED0 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1DFC761E0A643A00D44ED0 /* RecommendCell.m */; };
 		6D1DFC7D1E0A649500D44ED0 /* BidListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1DFC7C1E0A649500D44ED0 /* BidListViewController.m */; };
@@ -67,6 +70,12 @@
 		3A7175DA034D065C36582E4E /* Pods-TotalMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TotalMoney/Pods-TotalMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		42E164017839AEE01F6B9F53 /* Pods-TotalMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-TotalMoney/Pods-TotalMoney.release.xcconfig"; sourceTree = "<group>"; };
 		655B74831E34E3C7008E2360 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		65F887861E4AA9DF00D82D40 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		65F887871E4AA9DF00D82D40 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		65F887891E4AA9EF00D82D40 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		65F8878A1E4AA9EF00D82D40 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		65F8878F1E4AADC000D82D40 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		65F887901E4AADC000D82D40 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		6D1DFC711E0A643A00D44ED0 /* RecommendedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedViewController.h; sourceTree = "<group>"; };
 		6D1DFC721E0A643A00D44ED0 /* RecommendedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedViewController.m; sourceTree = "<group>"; };
 		6D1DFC751E0A643A00D44ED0 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
@@ -178,6 +187,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		65F887851E4AA9BE00D82D40 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				65F887861E4AA9DF00D82D40 /* LoginViewController.h */,
+				65F887871E4AA9DF00D82D40 /* LoginViewController.m */,
+				65F887891E4AA9EF00D82D40 /* RegistViewController.h */,
+				65F8878A1E4AA9EF00D82D40 /* RegistViewController.m */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		65F8878E1E4AAD9700D82D40 /* CustomTools */ = {
+			isa = PBXGroup;
+			children = (
+				65F8878F1E4AADC000D82D40 /* Tools.h */,
+				65F887901E4AADC000D82D40 /* Tools.m */,
+			);
+			path = CustomTools;
+			sourceTree = "<group>";
+		};
 		6D1DFC701E0A643A00D44ED0 /* RecommendView */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +241,7 @@
 		6D1DFC7A1E0A648700D44ED0 /* MineView */ = {
 			isa = PBXGroup;
 			children = (
+				65F887851E4AA9BE00D82D40 /* LoginView */,
 				6DC510461E348B910067FB19 /* RecordView */,
 				6DC5103F1E345E030067FB19 /* MoreView */,
 				6DB374E61E31E6BD00F94F1D /* SuggestView */,
@@ -292,6 +322,7 @@
 		6D87695D1DEEBEAB00AC9692 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				65F8878E1E4AAD9700D82D40 /* CustomTools */,
 				6D8769671DEEC07300AC9692 /* CategoryTools */,
 			);
 			path = Tools;
@@ -653,6 +684,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F887881E4AA9DF00D82D40 /* LoginViewController.m in Sources */,
 				6D87697F1DEEC07300AC9692 /* UILabel+Extension.m in Sources */,
 				6D8769791DEEC07300AC9692 /* NSString+MD5.m in Sources */,
 				6DC510611E373A7C0067FB19 /* HistogramCell.m in Sources */,
@@ -667,8 +699,10 @@
 				6D8769651DEEC06100AC9692 /* BaseViewController.m in Sources */,
 				6D87692F1DEEBD9F00AC9692 /* AppDelegate.m in Sources */,
 				6D1DFC781E0A643A00D44ED0 /* RecommendCell.m in Sources */,
+				65F8878B1E4AA9EF00D82D40 /* RegistViewController.m in Sources */,
 				6DC510511E348BDF0067FB19 /* LegendCell.m in Sources */,
 				6D1DFC771E0A643A00D44ED0 /* RecommendedViewController.m in Sources */,
+				65F887911E4AADC000D82D40 /* Tools.m in Sources */,
 				6D87697C1DEEC07300AC9692 /* UIButton+Repeat.m in Sources */,
 				6D87697A1DEEC07300AC9692 /* NSString+Regex.m in Sources */,
 				6D37C48C1E0A5BB800AC17ED /* RootTabBarViewController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "SuggestViewController.h"
 #import "MoreViewController.h"
 #import "RecordViewController.h"
+#import "LoginViewController.h"
 
 static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
@@ -51,8 +52,8 @@ static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 }
 
 - (void)initData{
-    self.imageArray = @[@"标签",@"邮件",@"作业",@"时间"];
-    self.titleArray = @[@"记账",@"投资记录",@"给我们的建议",@"更多"];
+    self.imageArray = @[@"标签",@"邮件",@"作业",@"登录",@"时间"];
+    self.titleArray = @[@"记账",@"投资记录",@"给我们的建议",@"登录",@"更多"];
 }
 
 - (void)setUI{
@@ -66,7 +67,7 @@ static NSString *const MineTableViewCellID = @"MineTableViewCellID";
 
 #pragma mark --delegate--
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -98,6 +99,13 @@ static NSString *const MineTableViewCellID = @"MineTableViewCellID";
         {
             NSLog(@"建议");
             [self.navigationController pushViewController:[SuggestViewController new] animated:YES];
+        }
+            break;
+        
+        case LoginStyle:
+        {
+            NSLog(@"登录");
+            [self.navigationController pushViewController:[LoginViewController new] animated:YES];
         }
             break;
         case SettingStyle:
