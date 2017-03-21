@@ -26,6 +26,7 @@
 #define URL_USELOGOUT               [BASEURL stringByAppendingString:@"logout/"]                        //登出
 #define URL_FORGETRESETPASSWORD     [BASEURL stringByAppendingString:@"setpwd/"]                        //忘记密码重新设置密码
 #define URL_CHANGEATDFACE           [BASEURL stringByAppendingString:@"change/atdFace/"]                //修改头像
+#define URL_GETMONEYPRODUCT         [BASEURL stringByAppendingString:@"getProduct/"]                    //获取金融产品
 
 #define HEADER_CONTENT_TYPE            [NSDictionary dictionaryWithObjectsAndKeys:@"application/json", @"content-type", nil]
 #define USERID                         @"x-user-id"
