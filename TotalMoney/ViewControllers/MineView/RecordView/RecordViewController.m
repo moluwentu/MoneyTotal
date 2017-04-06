@@ -8,11 +8,15 @@
 
 #import "RecordViewController.h"
 #import "XTCirView.h"
+#import "RecordTableViewCell.h"
 
-@interface RecordViewController ()
+#define recordviewcellID @"recordviewcellID"
+
+@interface RecordViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)NSArray *cirArray;
 @property (nonatomic, strong)NSArray *colorArray;
+@property (nonatomic, strong)UITableView *recordTableView;
 
 @end
 
@@ -34,6 +38,7 @@
     
     XTCirView *cirView = [[XTCirView alloc]initWithCenter:CGPointMake(kScreenWidth * 1 / 3, 100) radius:50 colorArray:self.colorArray AngleArray:self.cirArray cirStyle:XTCirEmptyStyle isAnimation:YES];
     [self.view addSubview:cirView];
+    [self.view addSubview:self.recordTableView];
     
     CGFloat margin = 18;
     CGFloat imageheight = 15;
@@ -51,6 +56,26 @@
         [label setFrame:CGRectMake(kScreenWidth * 2 / 3 + 2, 60 + i * (imageheight + margin), kScreenWidth, imageheight)];
         [self.view addSubview:label];
     }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:recordviewcellID forIndexPath:indexPath];
+    return cell;
+}
+
+#pragma mark --lazyload--
+- (UITableView *)recordTableView{
+    if (_recordTableView == nil) {
+        _recordTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, kScreenWidth * 1 / 3 + 100, kScreenWidth, kScreenHeight - (kScreenWidth * 1 / 3 + 100)) style:UITableViewStylePlain];
+        _recordTableView.dataSource = self;
+        _recordTableView.delegate = self;
+        [_recordTableView registerClass:[RecordTableViewCell class] forCellReuseIdentifier:recordviewcellID];
+    }
+    return _recordTableView;
 }
 
 - (void)didReceiveMemoryWarning {

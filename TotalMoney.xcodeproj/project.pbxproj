@@ -45,6 +45,7 @@
 		6D90E7D71E4B004D00F240ED /* ResponseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7C71E4B004D00F240ED /* ResponseUtil.m */; };
 		6D90E7D81E4B004D00F240ED /* NSObject+PreventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7CA1E4B004D00F240ED /* NSObject+PreventModel.m */; };
 		6D90E7D91E4B004D00F240ED /* PreventClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D90E7CC1E4B004D00F240ED /* PreventClassInfo.m */; };
+		6D9A14931E7FB616009B16A8 /* RecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A14921E7FB616009B16A8 /* RecordTableViewCell.m */; };
 		6DB3741C1E26220600F94F1D /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3741B1E26220600F94F1D /* MineHeaderView.m */; };
 		6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3741E1E2628EF00F94F1D /* MineTableViewCell.m */; };
 		6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB374661E2E040D00F94F1D /* ListTableViewCell.m */; };
@@ -163,6 +164,8 @@
 		6D90E7CA1E4B004D00F240ED /* NSObject+PreventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PreventModel.m"; sourceTree = "<group>"; };
 		6D90E7CB1E4B004D00F240ED /* PreventClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreventClassInfo.h; sourceTree = "<group>"; };
 		6D90E7CC1E4B004D00F240ED /* PreventClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreventClassInfo.m; sourceTree = "<group>"; };
+		6D9A14911E7FB616009B16A8 /* RecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordTableViewCell.h; sourceTree = "<group>"; };
+		6D9A14921E7FB616009B16A8 /* RecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordTableViewCell.m; sourceTree = "<group>"; };
 		6DB3741A1E26220600F94F1D /* MineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
 		6DB3741B1E26220600F94F1D /* MineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
 		6DB3741D1E2628EF00F94F1D /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
@@ -601,6 +604,8 @@
 				6DC5104A1E348BD60067FB19 /* XTGraphcal */,
 				6DC510471E348B9F0067FB19 /* RecordViewController.h */,
 				6DC510481E348B9F0067FB19 /* RecordViewController.m */,
+				6D9A14911E7FB616009B16A8 /* RecordTableViewCell.h */,
+				6D9A14921E7FB616009B16A8 /* RecordTableViewCell.m */,
 			);
 			path = RecordView;
 			sourceTree = "<group>";
@@ -713,7 +718,7 @@
 				TargetAttributes = {
 					6D8769261DEEBD9F00AC9692 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2YR2E4P8FC;
+						DevelopmentTeam = 37B4X3EZ65;
 						ProvisioningStyle = Automatic;
 					};
 					6D87693F1DEEBD9F00AC9692 = {
@@ -915,6 +920,7 @@
 				6DC510521E348BDF0067FB19 /* XTCirView.m in Sources */,
 				6D90E7D71E4B004D00F240ED /* ResponseUtil.m in Sources */,
 				6DB374671E2E040D00F94F1D /* ListTableViewCell.m in Sources */,
+				6D9A14931E7FB616009B16A8 /* RecordTableViewCell.m in Sources */,
 				6DB3741C1E26220600F94F1D /* MineHeaderView.m in Sources */,
 				6D87697D1DEEC07300AC9692 /* UIGestureRecognizer+block.m in Sources */,
 				6DB374E91E31E6CB00F94F1D /* SuggestViewController.m in Sources */,
@@ -1069,7 +1075,7 @@
 			baseConfigurationReference = 3A7175DA034D065C36582E4E /* Pods-TotalMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YR2E4P8FC;
+				DEVELOPMENT_TEAM = 37B4X3EZ65;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TotalMoney/HelpToolsPrefix.pch";
 				INFOPLIST_FILE = TotalMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1083,7 +1089,7 @@
 			baseConfigurationReference = 42E164017839AEE01F6B9F53 /* Pods-TotalMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YR2E4P8FC;
+				DEVELOPMENT_TEAM = 37B4X3EZ65;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TotalMoney/HelpToolsPrefix.pch";
 				INFOPLIST_FILE = TotalMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

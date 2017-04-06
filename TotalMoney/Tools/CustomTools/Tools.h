@@ -19,7 +19,7 @@ typedef void (^networkStatus)(int status);
 + (Tools *)shareTools;
 
 
--(void)addNotifacationMessageToView:(UIView *)view withMessage:(NSString *)message;
+//-(void)addNotifacationMessageToView:(UIView *)view withMessage:(NSString *)message;
 
 //转化考勤服务器时间 "1970-01-18T02:48:51.300Z","2016-11-15T06:54:00.000Z"
 -(NSString *)getDateStrFromSreverStr:(NSString *)str;

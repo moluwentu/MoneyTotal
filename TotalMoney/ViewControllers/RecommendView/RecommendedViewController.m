@@ -28,7 +28,7 @@ static NSString *HistogramCellID = @"HistogramCellID";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor cyanColor];
-    self.backMarginArray = @[[UIColor yellowColor],[UIColor cyanColor],[UIColor greenColor]];
+    self.backMarginArray = @[RGB(254, 242, 155),RGB(82, 189, 248),RGB(155, 232, 106)];
     [self setUI];
     [self initData];
 }
@@ -83,7 +83,7 @@ static NSString *HistogramCellID = @"HistogramCellID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 100;
+        return 80;
     }else{
         return 50;
     }
