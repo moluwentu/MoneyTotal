@@ -19,6 +19,36 @@ typedef ResponseUtil* (^HandleBlock)(ResponseUtil *responseUtil,NSDictionary *di
                         identifier:(NSString *)identifier
                          callBlock:(ResultBlock )resultBlock;
 
+//获取首页公告
++ (void)getHomeListWithParamters:(NSDictionary *)parameters
+                         groupId:(NSString *)groupId
+                      identifier:(NSString *)identifier
+                       callBlock:(ResultBlock )resultBlock;
+
+//获取公司列表
++ (void)getCompanyWithParamters:(NSDictionary *)parameters
+                        groupId:(NSString *)groupId
+                     identifier:(NSString *)identifier
+                      callBlock:(ResultBlock )resultBlock;
+
+//建议
++ (void)suggestWithParamters:(NSDictionary *)parameters
+                     groupId:(NSString *)groupId
+                  identifier:(NSString *)identifier
+                   callBlock:(ResultBlock )resultBlock;
+
+//登录
++ (void)loginWithParamters:(NSDictionary *)parameters
+                     groupId:(NSString *)groupId
+                  identifier:(NSString *)identifier
+                   callBlock:(ResultBlock )resultBlock;
+
+//注册
++ (void)registWithParamters:(NSDictionary *)parameters
+                   groupId:(NSString *)groupId
+                identifier:(NSString *)identifier
+                 callBlock:(ResultBlock )resultBlock;
+
 #pragma mark --- 取消单个网络请求 ----
 + (void)cancelRequestForIdentifier:(NSString *)identifier;
 

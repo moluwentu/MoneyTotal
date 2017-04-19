@@ -9,5 +9,6 @@
 #ifndef ModelHeader_h
 #define ModelHeader_h
 
+#import "CompanyModel.h"
 
 #endif /* ModelHeader_h */

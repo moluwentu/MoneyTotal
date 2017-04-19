@@ -11,7 +11,8 @@
 #import "TaskSack.h"
 #import "ModelHeader.h"
 
-#define kServiceAddress @"https://m.chaincar.com/"
+//#define kServiceAddress @"https://m.chaincar.com/"
+#define kServiceAddress @"http://119.254.209.148:6001/"
 
 @implementation AsyncRequestHandles
 
@@ -34,6 +35,99 @@
                                      }];
 }
 
+//获取首页公告
++ (void)getHomeListWithParamters:(NSDictionary *)parameters
+                           groupId:(NSString *)groupId
+                        identifier:(NSString *)identifier
+                         callBlock:(ResultBlock )resultBlock {
+    [AsyncRequestHandles hanedleVerifyLogin:parameters
+                                 identifier:identifier
+                                    groupId:groupId
+                                  callBlock:resultBlock
+                                      chars:@"app/moneyProduct/"
+                                requestType:REQUEST_HTTP_POST
+                                     handle:^ResponseUtil *(ResponseUtil *responseUtil, NSDictionary *dic) {
+                                         
+                                         
+                                         
+                                         return responseUtil;
+                                     }];
+}
+
+//获取公司列表
++ (void)getCompanyWithParamters:(NSDictionary *)parameters
+                     groupId:(NSString *)groupId
+                  identifier:(NSString *)identifier
+                   callBlock:(ResultBlock )resultBlock {
+    [AsyncRequestHandles hanedleVerifyLogin:parameters
+                                 identifier:identifier
+                                    groupId:groupId
+                                  callBlock:resultBlock
+                                      chars:@"app/companyList/"
+                                requestType:REQUEST_HTTP_POST
+                                     handle:^ResponseUtil *(ResponseUtil *responseUtil, NSDictionary *dic) {
+                                    responseUtil.responseResult = [ResponseHandle modelWithJSON:dic class:[CompanyModel class]];
+                                         
+                                         return responseUtil;
+                                     }];
+}
+
+//建议
++ (void)suggestWithParamters:(NSDictionary *)parameters
+                        groupId:(NSString *)groupId
+                     identifier:(NSString *)identifier
+                      callBlock:(ResultBlock )resultBlock {
+    [AsyncRequestHandles hanedleVerifyLogin:parameters
+                                 identifier:identifier
+                                    groupId:groupId
+                                  callBlock:resultBlock
+                                      chars:@"app/uploadSuggestion/"
+                                requestType:REQUEST_HTTP_POST
+                                     handle:^ResponseUtil *(ResponseUtil *responseUtil, NSDictionary *dic) {
+                                         
+                                         
+                                         
+                                         return responseUtil;
+                                     }];
+}
+
+//登录
++ (void)loginWithParamters:(NSDictionary *)parameters
+                   groupId:(NSString *)groupId
+                identifier:(NSString *)identifier
+                 callBlock:(ResultBlock )resultBlock{
+    [AsyncRequestHandles hanedleVerifyLogin:parameters
+                                 identifier:identifier
+                                    groupId:groupId
+                                  callBlock:resultBlock
+                                      chars:@"api/login/"
+                                requestType:REQUEST_HTTP_POST
+                                     handle:^ResponseUtil *(ResponseUtil *responseUtil, NSDictionary *dic) {
+                                         
+                                         
+                                         
+                                         return responseUtil;
+                                     }];
+}
+
+//注册
++ (void)registWithParamters:(NSDictionary *)parameters
+                    groupId:(NSString *)groupId
+                 identifier:(NSString *)identifier
+                  callBlock:(ResultBlock )resultBlock{
+    [AsyncRequestHandles hanedleVerifyLogin:parameters
+                                 identifier:identifier
+                                    groupId:groupId
+                                  callBlock:resultBlock
+                                      chars:@"app/regist/confirm/"
+                                requestType:REQUEST_HTTP_POST
+                                     handle:^ResponseUtil *(ResponseUtil *responseUtil, NSDictionary *dic) {
+                                         
+                                         
+                                         return responseUtil;
+                                     }];
+
+}
 
 //  上传图片
 //+ (void)uploadImageWithParamters:(NSDictionary *)parameters

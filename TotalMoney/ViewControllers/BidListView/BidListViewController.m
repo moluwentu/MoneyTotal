@@ -9,6 +9,9 @@
 #import "BidListViewController.h"
 #import "SortCollectionViewCell.h"
 #import "ListTableViewCell.h"
+#import "AsyncRequestHandles.h"
+#import "CompanyModel.h"
+#import "CompanyDetailModel.h"
 
 static NSString *const SortCollectionViewCellID = @"SortCollectionViewCell";
 static NSString *const ListTableViewCellID = @"ListTableViewCellID";
@@ -20,6 +23,7 @@ static NSString *const ListTableViewCellID = @"ListTableViewCellID";
 @property (nonatomic, strong)UIButton *moreBtn;
 @property (nonatomic, assign)NSInteger cellCount;
 @property (nonatomic, assign)bool isOpen;
+@property (nonatomic, strong)CompanyModel *company;
 
 @end
 
@@ -31,6 +35,15 @@ static NSString *const ListTableViewCellID = @"ListTableViewCellID";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.cellCount = 8;
     [self setUI];
+    [self loadData];
+}
+
+- (void)loadData{
+    [AsyncRequestHandles getCompanyWithParamters:nil groupId:nil identifier:@"comlist" callBlock:^(ResponseUtil *response) {
+        self.company = response.responseResult;
+        NSLog(@"%@",response.responseJson);
+        [self.sortView reloadData];
+    }];
 }
 
 - (void)setUI{
@@ -96,6 +109,8 @@ static NSString *const ListTableViewCellID = @"ListTableViewCellID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SortCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SortCollectionViewCellID forIndexPath:indexPath];
+    CompanyDetailModel *comDetail = self.company.result[indexPath.item];
+    cell.iconStr = comDetail.icon;
     return cell;
 }
 

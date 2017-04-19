@@ -31,6 +31,7 @@ static NSString *HistogramCellID = @"HistogramCellID";
     self.backMarginArray = @[RGB(254, 242, 155),RGB(82, 189, 248),RGB(155, 232, 106)];
     [self setUI];
     [self initData];
+    
 }
 
 - (void)initData{

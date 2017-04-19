@@ -10,6 +10,7 @@
 #define HelpToolsPrefix_pch
 
 #import "CateGoryHeader.h"
+#import <UIImageView+WebCache.h>
 #import <Masonry.h>
 
 //自定义输出宏

@@ -10,4 +10,6 @@
 
 @interface SortCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong)NSString *iconStr;
+
 @end
