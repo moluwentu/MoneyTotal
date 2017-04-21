@@ -10,5 +10,6 @@
 #define ModelHeader_h
 
 #import "CompanyModel.h"
+#import "HomeListModel.h"
 
 #endif /* ModelHeader_h */

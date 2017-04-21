@@ -110,8 +110,19 @@ static NSString *const ListTableViewCellID = @"ListTableViewCellID";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SortCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:SortCollectionViewCellID forIndexPath:indexPath];
     CompanyDetailModel *comDetail = self.company.result[indexPath.item];
-    cell.iconStr = comDetail.icon;
+//    cell.iconStr = comDetail.icon;
+    cell.company = comDetail;
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    SortCollectionViewCell *cell = (SortCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [AsyncRequestHandles getCompanyProduceWithParamters:@{@"companyId" : cell.company._id} groupId:nil identifier:@"getCompanyProduce" callBlock:^(ResponseUtil *response) {
+        NSLog(@"%@",response.responseJson);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

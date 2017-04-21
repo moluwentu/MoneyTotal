@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CompanyDetailModel.h"
 
 @interface SortCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong)NSString *iconStr;
+@property (nonatomic, strong)CompanyDetailModel *company;
 
 @end

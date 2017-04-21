@@ -12,6 +12,7 @@
 #import "CateGoryHeader.h"
 #import <UIImageView+WebCache.h>
 #import <Masonry.h>
+#import <MBProgressHUD.h>
 
 //自定义输出宏
 #ifdef DEBUG

@@ -16,6 +16,8 @@
 		6D1DFC801E0A64A800D44ED0 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1DFC7F1E0A64A800D44ED0 /* MineViewController.m */; };
 		6D23CF191EA702E4005CE3B0 /* CompanyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23CF181EA702E4005CE3B0 /* CompanyModel.m */; };
 		6D23CF1C1EA703C8005CE3B0 /* CompanyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23CF1B1EA703C8005CE3B0 /* CompanyDetailModel.m */; };
+		6D23CF2B1EA9AC52005CE3B0 /* HomeProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23CF2A1EA9AC52005CE3B0 /* HomeProductModel.m */; };
+		6D23CF2E1EA9AD1C005CE3B0 /* HomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23CF2D1EA9AD1C005CE3B0 /* HomeListModel.m */; };
 		6D37C48C1E0A5BB800AC17ED /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D37C48B1E0A5BB800AC17ED /* RootTabBarViewController.m */; };
 		6D87692C1DEEBD9F00AC9692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87692B1DEEBD9F00AC9692 /* main.m */; };
 		6D87692F1DEEBD9F00AC9692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87692E1DEEBD9F00AC9692 /* AppDelegate.m */; };
@@ -104,6 +106,10 @@
 		6D23CF181EA702E4005CE3B0 /* CompanyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyModel.m; sourceTree = "<group>"; };
 		6D23CF1A1EA703C8005CE3B0 /* CompanyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyDetailModel.h; sourceTree = "<group>"; };
 		6D23CF1B1EA703C8005CE3B0 /* CompanyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyDetailModel.m; sourceTree = "<group>"; };
+		6D23CF291EA9AC52005CE3B0 /* HomeProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeProductModel.h; sourceTree = "<group>"; };
+		6D23CF2A1EA9AC52005CE3B0 /* HomeProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeProductModel.m; sourceTree = "<group>"; };
+		6D23CF2C1EA9AD1C005CE3B0 /* HomeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListModel.h; sourceTree = "<group>"; };
+		6D23CF2D1EA9AD1C005CE3B0 /* HomeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListModel.m; sourceTree = "<group>"; };
 		6D37C48A1E0A5BB800AC17ED /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
 		6D37C48B1E0A5BB800AC17ED /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
 		6D8769271DEEBD9F00AC9692 /* TotalMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +311,7 @@
 		6D23CF151EA70097005CE3B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6D23CF281EA9AC47005CE3B0 /* HomeProductModel */,
 				6D23CF161EA702BD005CE3B0 /* CompanyModel */,
 			);
 			path = Model;
@@ -319,6 +326,17 @@
 				6D23CF1B1EA703C8005CE3B0 /* CompanyDetailModel.m */,
 			);
 			path = CompanyModel;
+			sourceTree = "<group>";
+		};
+		6D23CF281EA9AC47005CE3B0 /* HomeProductModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D23CF291EA9AC52005CE3B0 /* HomeProductModel.h */,
+				6D23CF2A1EA9AC52005CE3B0 /* HomeProductModel.m */,
+				6D23CF2C1EA9AD1C005CE3B0 /* HomeListModel.h */,
+				6D23CF2D1EA9AD1C005CE3B0 /* HomeListModel.m */,
+			);
+			path = HomeProductModel;
 			sourceTree = "<group>";
 		};
 		6D87691E1DEEBD9F00AC9692 = {
@@ -912,6 +930,7 @@
 				6D90E7D91E4B004D00F240ED /* PreventClassInfo.m in Sources */,
 				6DC510611E373A7C0067FB19 /* HistogramCell.m in Sources */,
 				6DC510421E345E0F0067FB19 /* MoreViewController.m in Sources */,
+				6D23CF2B1EA9AC52005CE3B0 /* HomeProductModel.m in Sources */,
 				6D90E7CE1E4B004D00F240ED /* Errand.m in Sources */,
 				6D90E7D01E4B004D00F240ED /* ResponseHandle.m in Sources */,
 				6DB3741F1E2628EF00F94F1D /* MineTableViewCell.m in Sources */,
@@ -937,6 +956,7 @@
 				6D87697A1DEEC07300AC9692 /* NSString+Regex.m in Sources */,
 				6D37C48C1E0A5BB800AC17ED /* RootTabBarViewController.m in Sources */,
 				6D1DFC801E0A64A800D44ED0 /* MineViewController.m in Sources */,
+				6D23CF2E1EA9AD1C005CE3B0 /* HomeListModel.m in Sources */,
 				6D90E7D61E4B004D00F240ED /* RequestUtil.m in Sources */,
 				6D23CF191EA702E4005CE3B0 /* CompanyModel.m in Sources */,
 				6D1DFC7D1E0A649500D44ED0 /* BidListViewController.m in Sources */,

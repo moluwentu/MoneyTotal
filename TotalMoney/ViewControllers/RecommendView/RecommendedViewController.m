@@ -9,6 +9,9 @@
 #import "RecommendedViewController.h"
 #import "RecommendCell.h"
 #import "HistogramCell.h"
+#import "AsyncRequestHandles.h"
+#import "HomeListModel.h"
+#import "HomeProductModel.h"
 
 static NSString *RecommendCellID = @"RecommendCellID";
 static NSString *HistogramCellID = @"HistogramCellID";
@@ -46,6 +49,14 @@ static NSString *HistogramCellID = @"HistogramCellID";
         double width = [self.profitArray[i] doubleValue] / [self.profitArray[0] doubleValue] * (kScreenWidth - 50);
         [self.resultArray addObject:[NSString stringWithFormat:@"%f",width]];
     }
+    
+    [AsyncRequestHandles getHomeListWithParamters:nil groupId:nil identifier:@"gethomeList" callBlock:^(ResponseUtil *response) {
+        NSLog(@"%@",response.responseJson);
+        HomeListModel *list = response.responseResult;
+        for (HomeProductModel *product in list.result) {
+            NSLog(@"%d",[product.hasDisCount boolValue]);
+        }
+    }];
 }
 
 - (void)setUI{

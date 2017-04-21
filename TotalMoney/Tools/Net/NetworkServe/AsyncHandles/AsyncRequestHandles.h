@@ -49,6 +49,12 @@ typedef ResponseUtil* (^HandleBlock)(ResponseUtil *responseUtil,NSDictionary *di
                 identifier:(NSString *)identifier
                  callBlock:(ResultBlock )resultBlock;
 
+//获取对应公司产品
++ (void)getCompanyProduceWithParamters:(NSDictionary *)parameters
+                               groupId:(NSString *)groupId
+                            identifier:(NSString *)identifier
+                             callBlock:(ResultBlock )resultBlock;
+
 #pragma mark --- 取消单个网络请求 ----
 + (void)cancelRequestForIdentifier:(NSString *)identifier;
 

@@ -12,6 +12,7 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'Masonry'
 pod 'MJRefresh' 
+pod ‘MBProgressHUD’
   target 'TotalMoneyUITests' do
     inherit! :search_paths
     # Pods for testing

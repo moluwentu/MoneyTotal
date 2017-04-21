@@ -35,7 +35,7 @@
                                      }];
 }
 
-//获取首页公告
+//获取首页产品
 + (void)getHomeListWithParamters:(NSDictionary *)parameters
                            groupId:(NSString *)groupId
                         identifier:(NSString *)identifier
@@ -48,7 +48,7 @@
                                 requestType:REQUEST_HTTP_POST
                                      handle:^ResponseUtil *(ResponseUtil *responseUtil, NSDictionary *dic) {
                                          
-                                         
+                                       responseUtil.responseResult = [ResponseHandle modelWithJSON:dic class:[HomeListModel class]];
                                          
                                          return responseUtil;
                                      }];
@@ -128,6 +128,26 @@
                                      }];
 
 }
+
+//获取对应公司产品
++ (void)getCompanyProduceWithParamters:(NSDictionary *)parameters
+                         groupId:(NSString *)groupId
+                      identifier:(NSString *)identifier
+                       callBlock:(ResultBlock )resultBlock {
+    [AsyncRequestHandles hanedleVerifyLogin:parameters
+                                 identifier:identifier
+                                    groupId:groupId
+                                  callBlock:resultBlock
+                                      chars:@"app/moneyProduct/"
+                                requestType:REQUEST_HTTP_POST
+                                     handle:^ResponseUtil *(ResponseUtil *responseUtil, NSDictionary *dic) {
+                                         
+                                         
+                                         
+                                         return responseUtil;
+                                     }];
+}
+
 
 //  上传图片
 //+ (void)uploadImageWithParamters:(NSDictionary *)parameters

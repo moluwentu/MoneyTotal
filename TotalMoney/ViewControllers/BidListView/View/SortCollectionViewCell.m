@@ -23,9 +23,14 @@
     return self;
 }
 
-- (void)setIconStr:(NSString *)iconStr{
-    _iconStr = iconStr;
-    [self.sortImageView sd_setImageWithURL:[NSURL URLWithString:_iconStr]];
+//- (void)setIconStr:(NSString *)iconStr{
+//    _iconStr = iconStr;
+//    [self.sortImageView sd_setImageWithURL:[NSURL URLWithString:_iconStr]];
+//}
+
+- (void)setCompany:(CompanyDetailModel *)company{
+    _company = company;
+    [self.sortImageView sd_setImageWithURL:[NSURL URLWithString:_company.icon]];
 }
 
 - (void)setUI{
